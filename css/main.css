@@ -81,6 +81,38 @@
 
 .highlight {
     padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.footer {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    color: #eee;
+}
+
+.footer-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #eee;
+}
+
+.footer-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #ccc;
+}
+
+.footer-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin-right: 14px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: none;
+    color: #fff;
 }
 
 @media screen and (max-width: 576px) {
