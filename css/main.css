@@ -1,5 +1,5 @@
 #particles {
-    position: absolute;
+    position: fixed;
     background-color: #eee;
     z-index: -10;
     width: 100%;
@@ -67,6 +67,22 @@
     font-size: 6vmin;
     font-family: 'Lora', serif;
     user-select: none;
+}
+
+#content p {
+    font-family: 'Roboto Slab', serif;
+}
+
+.roboto-mono {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.text-link {
+    color: #222;
+}
+
+.text-link:hover {
+    color: #aaa;
 }
 
 .opaque-section {
