@@ -52,7 +52,7 @@ body {
     width: 20vh;
 }
 
-#about-me-img {
+.section-img {
     height: 27vh;
     width: 27vh;
 }
@@ -147,6 +147,22 @@ body {
 .footer-link:hover {
     text-decoration: none;
     color: #fff;
+}
+
+.acad-project {
+    min-height: 35vh;
+    padding-bottom: 5vh;
+}
+
+.acad-project h4 {
+    font-weight: 600;
+}
+
+.acad-project h6 {
+    font-family: "Robo;to Mono", monospace;
+    font-weight: 400;
+    color: #aaa;
+    line-height: 10%;
 }
 
 @media screen and (max-width: 576px) {

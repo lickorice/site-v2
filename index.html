@@ -101,6 +101,9 @@
           <div class="container">
             <h2>About me</h2>
             <div class="d-flex flex-lg-row flex-column">
+              <div class="text-center text-lg-start me-lg-4 d-lg-flex d-none my-auto">
+                <img src="assets/up.jpg" alt="" class="section-img rounded-circle">
+              </div>
               <div class="my-auto">
                 <p>
                   I am currently a college undergrad majoring in <span class="fw-bold">computer science</span>. I study at the <span class="fw-bold">University of the Philippines, Diliman</span>.
@@ -112,15 +115,60 @@
                   My journey into computer science started with my early appreciation for mathematics in elementary. It then got followed with some dabbling into programming in high school. Some programs I have made in the past are still being used by hundreds—if not thousands of people now.
                 </p>
               </div>
-              <div class="text-center text-lg-start ms-lg-4 d-lg-flex d-none my-auto">
-                <img src="assets/up.jpg" alt="" id="about-me-img">
-              </div>
             </div>
           </div>
         </div>
         <div class="col-md">
           <div class="container">
             <h2>Academic projects</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="acad-project">
+                    <div class="d-flex flex-lg-row flex-column">
+                      <div>
+                        <img src="assets/cs140_1.jpg" alt="" class="section-img d-lg-inline-flex d-none">
+                      </div>
+                      <div class="ms-lg-3 ms-0 my-auto">
+                        <h4>Paging behavior manipulation in xv6</h4>
+                        <h6>CS 140 - OPERATING SYSTEMS</h6>
+                        <p class="mt-4"><span class="fw-bold">xv6</span> is a teaching operating system developed by MIT, implemented in ANSI C. As students of CS 140, we are tasked to appropriately alter its source code to make its paging procedure much more efficient.</p>
+                        <p>We had to alter kernel-level code to implement custom system calls, such as printing the page table, and other system variables. We also had to implement lazy page allocation and empty page reuse to optimize compute time and space.</p>
+                      </div>
+                    </div>
+                  </div>  
+                </div>
+                <!-- <div class="carousel-item">
+                  <div class="acad-project">
+                    <div class="d-flex flex-lg-row flex-column">
+                      <div>
+                        image here
+                      </div>
+                      <div>
+                        text here
+                      </div>
+                    </div>
+                  </div>  
+                </div>
+                <div class="carousel-item">
+                  <div class="acad-project">
+                    <div class="d-flex flex-lg-row flex-column">
+                      <div>
+                        image here
+                      </div>
+                      <div>
+                        text here
+                      </div>
+                    </div>
+                  </div>  
+                </div> -->
+              </div>
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
