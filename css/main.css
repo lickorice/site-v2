@@ -101,6 +101,14 @@ body {
     min-height: 20vh;
 }
 
+.opaque-section a {
+    color: #fff;
+}
+
+.opaque-section a:hover {
+    color: #bbb;
+}
+
 .opaque-section p {
     color:#bbb;
 }
@@ -156,13 +164,13 @@ body {
 
 .acad-project h4 {
     font-weight: 600;
+    margin-bottom: 0;
 }
 
 .acad-project h6 {
     font-family: "Robo;to Mono", monospace;
     font-weight: 400;
     color: #aaa;
-    line-height: 10%;
 }
 
 @media screen and (max-width: 576px) {
