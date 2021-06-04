@@ -57,6 +57,11 @@ body {
     width: 27vh;
 }
 
+.section-img-small {
+    height: 12vh;
+    width: 12vh;
+}
+
 #intro {
     padding-top: 5vh; 
     padding-left: 5vh
@@ -168,9 +173,38 @@ body {
 }
 
 .acad-project h6 {
-    font-family: "Robo;to Mono", monospace;
+    font-family: "Roboto Mono", monospace;
     font-weight: 400;
     color: #aaa;
+}
+
+.work-position {
+    padding-bottom: 2vh;
+}
+
+.description {
+    flex-grow: 1;
+}
+
+.work-position h3 {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 600;
+    margin-bottom: 0.5vh;
+}
+
+.work-position h5 {
+    font-weight: 300;
+    display: inline;
+    margin-bottom: 0;
+}
+
+.work-position h6 {
+    display: inline;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    color: #aaa;
+    text-align: end;
+    margin-bottom: 0;
 }
 
 @media screen and (max-width: 576px) {
