@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 #particles {
     position: fixed;
     background-color: #eee;
@@ -48,6 +52,11 @@
     width: 20vh;
 }
 
+#about-me-img {
+    height: 27vh;
+    width: 27vh;
+}
+
 #intro {
     padding-top: 5vh; 
     padding-left: 5vh
@@ -87,8 +96,17 @@
 
 .opaque-section {
     padding-top: 5vh; 
+    padding-bottom: 5vh; 
     background-color: #222;
     min-height: 20vh;
+}
+
+.opaque-section p {
+    color:#bbb;
+}
+
+.opaque-section .fw-bold {
+    color:#eee;
 }
 
 .transparent {
