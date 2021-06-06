@@ -73,6 +73,10 @@ body {
     width: 27vh;
 }
 
+.acad-description {
+    height: 27vh;
+}
+
 .section-img-small {
     height: 12vh;
     width: 12vh;
@@ -227,6 +231,12 @@ body {
     padding-top: 7px;
     height: 30vmin;
     width: 30vmin;
+}
+
+@media screen and (max-width: 992px) {
+    .acad-description {
+        height: 40vh;
+    }
 }
 
 @media screen and (max-width: 576px) {
