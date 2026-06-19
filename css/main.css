@@ -181,6 +181,44 @@ body::before {
     display: none;
 }
 
+.footnotes {
+    margin-top: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
+.footnotes hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin: 0.5rem 0 0.75rem 0;
+}
+
+.footnotes ol {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.footnotes li {
+    margin: 0.35rem 0;
+    color: var(--text-muted);
+}
+
+.footnote-ref a {
+    background-color: var(--bg-color);
+    color: var(--yellow);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-decoration: none;
+    box-shadow: 3px 3px 0 var(--magenta);
+}
+
+.footnote-back {
+    margin-left: 0.5rem;
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
 .company-logo-wrapper {
     width: 48px;
     height: 48px;
@@ -412,6 +450,9 @@ body::before {
 
 /* Mobile responsiveness */
 @media (max-width: 520px) {
+    .crd-media {
+        display: none;
+    }
     .hero-content {
         display: block;
     }
