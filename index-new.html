@@ -151,6 +151,9 @@
             <div id="blog-posts-container">
                 <p class="text-secondary" id="blog-loading-text">Posts may still be loading. If this is blank, you may want to consider visiting the blog directly via the button below:</p>
             </div>
+            <div class="section-actions" style="margin-top:0.8rem;">
+                <a class="action-btn" href="https://blog.carlospanganiban.com" target="_blank" rel="noopener noreferrer">Visit my blog <i class="fa-solid fa-angles-right"></i></a>
+            </div>
         </section>
 
         <script>
@@ -305,6 +308,9 @@
                     </div>
                 </div>
             </article>
+            <div class="section-actions" style="margin-top:0.8rem;">
+                <a class="action-btn" href="https://www.linkedin.com/in/cgpanganiban/" target="_blank" rel="noopener noreferrer">See my <i class="fab fa-linkedin"></i> LinkedIn <i class="fa-solid fa-angles-right"></i></a>
+            </div>
 
         </section>
 
@@ -338,8 +344,27 @@
         </section>
 
     </div>
-
+    <!-- Site footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="brutalist-container" style="padding:1rem 1.5rem;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+                <div class="footer-links">
+                    <a target="_blank" href="https://www.youtube.com/channel/UC8a5WOVoh87BHLd9me_ie0Q" class="intro-link link-secondary"><i class="fab fa-youtube"></i></a>
+                    <a target="_blank" href="https://github.com/lickorice" class="intro-link link-secondary" style="margin-left:0.6rem;"><i class="fab fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/cgpanganiban/" class="intro-link link-secondary" style="margin-left:0.6rem;"><i class="fab fa-linkedin"></i></a>
+                    <a target="_blank" href="mailto:carlos@mithril-works.com" class="intro-link link-secondary" style="margin-left:0.6rem;"><i class="fa fa-envelope"></i> carlos@mithril-works.com</a>
+                </div>
+                <div class="footer-meta" style="color:var(--text-muted);font-family:var(--font-mono);">© Carlos Panganiban — <span id="footer-year"></span></div>
+            </div>
+        </div>
+    </footer>
     <script>
+        // set footer year
+        document.addEventListener('DOMContentLoaded', () => {
+            const y = new Date().getFullYear();
+            const el = document.getElementById('footer-year');
+            if (el) el.innerText = y;
+        });
         document.addEventListener('DOMContentLoaded', () => {
             const subtitleEl = document.getElementById('roll-subtitle')
             const subtitleContainer = document.getElementById("subtitle-container");

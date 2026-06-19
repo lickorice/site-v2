@@ -219,6 +219,42 @@ body::before {
     text-decoration: none;
 }
 
+.section-actions {
+    text-align: right;
+}
+
+/* Action buttons used in sections */
+.action-btn {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--font-header);
+    font-weight: 700;
+    box-shadow: 6px 6px 0px var(--magenta);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--yellow);
+    box-shadow: 10px 10px 0px var(--magenta-dark);
+}
+
+.site-footer {
+    border-top: 2px solid rgba(255,255,255,0.04);
+    margin-top: 2.5rem;
+    padding-top: 0.75rem;
+}
+
+.footer-links a { color: var(--text-color); text-decoration: none; }
+
+.footer-links a:hover { color: var(--yellow); }
+
+.footer-meta { font-size: 0.95rem; }
+
 .company-logo-wrapper {
     width: 48px;
     height: 48px;
