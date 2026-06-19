@@ -30,7 +30,6 @@ jobs:
             --acl public-read --delete --exact-timestamps
 
       - name: Create CloudFront invalidation
-        if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID != '' }}
         env:
           DIST_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
         run: |
