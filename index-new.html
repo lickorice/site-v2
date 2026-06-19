@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Welcome to the official website for Carlos Panganiban.">
+    <meta name="keywords"
+        content="carlos, panganiban, software, developer, university of the philippines, diliman, upd">
+    <meta name="author" content="Carlos Panganiban">
+    <link rel="image_src" href="https://cdn.carlospanganiban.com/site/og_img.jpg" />
+
+    <meta property="og:image" content="https://cdn.carlospanganiban.com/site/og_img.jpg">
+    <meta property="og:title" content="Carlos Panganiban" />
+    <meta property="og:description" content="Carlos Panganiban's online front yard." />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Carlos Panganiban</title>
+</head>
+
+<body>
+    <div class="brutalist-container">
+
+        <header class="hero-section">
+            <div class="hero-content">
+                <div class="avatar-box">
+                    <img src="assets/sq.png" alt="Carlos Panganiban Avatar">
+                </div>
+                <div class="hero-text">
+                    <h1 class="name-title">Carlos Panganiban</h1>
+                    <p class="text-secondary">
+                        <a target="_blank" href="https://www.youtube.com/channel/UC8a5WOVoh87BHLd9me_ie0Q"
+                            class="intro-link link-secondary" data-aos="fade" data-aos-delay="500" data-aos-duration="200"
+                            data-aos-easing="ease-in-sine">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a target="_blank" href="https://github.com/lickorice" class="intro-link link-secondary">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/cgpanganiban/" class="intro-link link-secondary">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a target="_blank" href="mailto:carlos@mithril-works.com" class="text-nowrap intro-link link-secondary">
+                            <i class="fa fa-envelope"></i>
+                            carlos@mithril-works.com
+                        </a>
+                    </p>
+                    <p class="subtitle" id="subtitle-container">
+                        <span id="roll-icon" class="loader"></span>
+                        <span id="roll-subtitle">Software Engineer</span>
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section class="mb-5">
+            <div class="section-header">
+                <h2>Who am I?</h2>
+            </div>
+
+            <article class="item-card edu-card">
+                <div class="edu-dot"></div>
+                <div class="company-content">
+                    <h3 class="org-name">Enhancing Real-Time License Plate Recognition Through Edge-Cloud Computing</h3>
+                    <div class="role-group">
+                        <h4 class="role-title">Presented at <a href="https://ieeexplore.ieee.org/document/9978152" class="link-primary">IEEE TENCON 2022</a>, @ Hong Kong SAR</h4>
+                        <span class="date-text">2022, <a class="link-secondary" href="https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16905168223458973292">cited by 7</a></span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="mb-5">
+            <div class="section-header">
+                <h2>Recent blog posts</h2>
+            </div>
+            <div id="blog-posts-container">
+                <p class="text-secondary" id="blog-loading-text">Loading latest posts...</p>
+            </div>
+        </section>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rssUrl = 'https://blog.carlospanganiban.com/index.xml';
+            const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+            const container = document.getElementById('blog-posts-container');
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.status === 'ok') {
+                        // Clear the loading text
+                        container.innerHTML = '';
+                        
+                        // Get only the top 5 posts
+                        const posts = data.items.slice(0, 5);
+                        
+                        posts.forEach(post => {
+                            // Format date cleanly
+                            const pubDate = new Date(post.pubDate).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'short',
+                                day: 'numeric'
+                            });
+
+                            // Strip HTML tags from description and truncate to 150 characters
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = post.description;
+                            let cleanDescription = tempDiv.textContent || tempDiv.innerText || '';
+                            if (cleanDescription.length > 150) {
+                                cleanDescription = cleanDescription.substring(0, 150) + '...';
+                            }
+
+                            // Build the HTML for each post
+                            const articleHtml = `
+                                <article class="item-card edu-card" style="margin-bottom: 1.5rem;">
+                                    <div class="edu-dot"></div>
+                                    <div class="company-content">
+                                        <h3 class="org-name" style="margin-bottom: 0.25rem;">
+                                            <a href="${post.link}" class="link-yellow text-decoration-none" target="_blank" rel="noopener noreferrer">
+                                                ${post.title}
+                                            </a>
+                                        </h3>
+                                        <p class="text-secondary" style="font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.4;">
+                                            ${cleanDescription}
+                                        </p>
+                                        <div class="role-group">
+                                            <span class="date-text">${pubDate}</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            `;
+                            container.insertAdjacentHTML('beforeend', articleHtml);
+                        });
+                    } else {
+                        throw new Error('RSS parsing failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching RSS feed:', error);
+                    container.innerHTML = '<p class="text-danger">Failed to load recent blog posts. Please check back later.</p>';
+                });
+        });
+    </script>
+
+        <section class="mb-5">
+            <div class="section-header">
+                <h2>Publications</h2>
+            </div>
+
+            <article class="item-card edu-card">
+                <div class="edu-dot"></div>
+                <div class="company-content">
+                    <h3 class="org-name">Enhancing Real-Time License Plate Recognition Through Edge-Cloud Computing</h3>
+                    <div class="role-group">
+                        <h4 class="role-title">Presented at <a href="https://ieeexplore.ieee.org/document/9978152" class="link-yellow">IEEE TENCON 2022</a>, @ Hong Kong SAR</h4>
+                        <span class="date-text">2022, <a class="link-magenta" href="https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16905168223458973292">cited by 7</a></span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="mb-5">
+            <div class="section-header">
+                <h2>Experience</h2>
+            </div>
+
+            <article class="item-card">
+                <div class="company-logo-wrapper">
+                    <img src="assets/apkudo.jpg" alt="Apkudo Logo">
+                </div>
+                <div class="company-content">
+                    <h3 class="org-name">Apkudo</h3>
+
+                    <div class="role-group">
+                        <h4 class="role-title">Software Engineer</h4>
+                        <span class="date-text">Since OCT 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card">
+                <div class="company-logo-wrapper">
+                    <img src="assets/expedock.png" alt="Expedock Logo">
+                </div>
+                <div class="company-content">
+                    <h3 class="org-name">Expedock</h3>
+
+                    <div class="role-group">
+                        <h4 class="role-title">Software Engineer</h4>
+                        <span class="date-text">SEP 2023 - SEP 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card">
+                <div class="company-logo-wrapper">
+                    <img src="assets/ti.jpg" alt="Texas Instruments Logo">
+                </div>
+                <div class="company-content">
+                    <h3 class="org-name">Texas Instruments</h3>
+
+                    <div class="role-group">
+                        <h4 class="role-title">Intern</h4>
+                        <span class="date-text">JUN - AUG 2021</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card">
+                <div class="company-logo-wrapper">
+                    <img src="assets/up.png" alt="UP Diliman Logo">
+                </div>
+                <div class="company-content">
+                    <h3 class="org-name">University of the Philippines</h3>
+
+                    <div class="role-group">
+                        <h4 class="role-title">Consultant</h4>
+                        <span class="date-text">Since SEP 2023</span>
+                    </div>
+                    <div class="role-group">
+                        <h4 class="role-title">System Administrator</h4>
+                        <span class="date-text">SEP 2022 - SEP 2023</span>
+                    </div>
+                    <div class="role-group">
+                        <h4 class="role-title">Computer Programmer III</h4>
+                        <span class="date-text">SEP 2021 - SEP 2022</span>
+                    </div>
+                    <div class="role-group">
+                        <h4 class="role-title">Computer Programmer I</h4>
+                        <span class="date-text">NOV 2020 - SEP 2021</span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2>Education</h2>
+            </div>
+
+            <article class="item-card edu-card">
+                <div class="edu-dot"></div>
+                <div class="company-content">
+                    <h3 class="org-name">Korea Advanced Institute of Science and Technology</h3>
+                    <div class="role-group">
+                        <h4 class="role-title">MS-PhD Program (<span
+                                style="color:rgb(220, 53, 69); font-weight: bold;">DROPPED OUT</span>)</h4>
+                        <span class="date-text">2023</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card edu-card">
+                <div class="edu-dot"></div>
+                <div class="company-content">
+                    <h3 class="org-name">University of the Philippines Diliman</h3>
+                    <div class="role-group">
+                        <h4 class="role-title">Bachelor of Science in Computer Science, magna cum laude</h4>
+                        <span class="date-text">2018 - 2022</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const subtitleEl = document.getElementById('roll-subtitle')
+            const subtitleContainer = document.getElementById("subtitle-container");
+            const iconEl = document.getElementById("roll-icon");
+
+            const funnyTitles = [
+                "Coffee-to-Code Converter",
+                "Professional Stack Overflow Explorer",
+                "TypeScript Type-Safety Extremist",
+                "PostgreSQL Query Whisperer",
+                "Gunpla Weathering Enthusiast",
+                "Docker Container Wrangler",
+                "Shipwreck Diver (Code & Maritime)",
+                "Git Commit Over-Thinker",
+                "Ctrl+Z Power User",
+                "Localhost 3000 Celebrity",
+                "Vim Exit Strategy Consultant",
+                "Merge Conflict Arbitrator",
+                "Legacy Code Archaeologist",
+                "AWS Billing Alert Ignorer",
+                "`console.log('here')` Senior Architect",
+                "Tabs vs. Spaces Diplomat",
+                "Browser Tab Hoarder",
+                "Rubber Duck Therapist",
+                "Regex Trial-and-Error Specialist",
+                "Variable Naming Overthinker",
+                "Detached HEAD State Survivor",
+                "Pull Request Novelist",
+                "Print Statement Debugging Purist",
+                "Weekend Side-Project Abandoner",
+                "Bug Relocation Engineer",
+                "Keyboard Shortcut Memorizer",
+                "Production Deployment Daredevil",
+                "Casual Linting Rule Ignorer",
+                "Git Rebase Coward",
+                "Stack Trace Speed Reader",
+                "Caffeine-to-Sarcasm Synthesizer",
+                "Deprecated Systems Necromancer",
+                "Sprint Planning Skeptic",
+                "Browser Cache Purging Expert",
+                "WIP Commit Message Spammer",
+                "Timezone Logic Hater",
+                "Date-String Formatting Victim",
+                "Monorepo Maze Navigator",
+                "Spaghetti Code Chef",
+                "Asynchronous Race Condition Spectator",
+                "Code Review Nitpicker",
+                "3 AM Idea Implementer",
+                "Mock Data Architect",
+                "Tech Debt Investor",
+                "Ctrl+C / Ctrl+V Pipeline Engineer",
+                "Metronome-Ignoring Pianist",
+                "Sight-Reading Roulette Gambler",
+                "Violin Rosin Inhalation Specialist",
+                "Accidental Avant-Garde Violinist",
+                "Suzuki Method Nostalgia Tripper",
+                "Fortissimo-Only Dynamics Expert",
+                "Unsynchronized Duet Partner",
+                "Baroque Ornamentation Improviser",
+                "Loud Kapampangan Conversationalist",
+                "Tibok-Tibok Texture Evaluator",
+                "In-Game Spreadsheet Operations Manager",
+                "Factorio Main Bus Driver",
+                "Train Signal Chaos Creator",
+                "Crusader Kings Family Tree Untangler",
+                "Conveyor Belt Balancer Plagiarist",
+                "Mana Point Hoarder",
+                "'One More Turn' Victim",
+                "GregTech New Horizons Survivor",
+                "Electric Blast Furnace Babysitter",
+                "Chemical Reactor Pipe-Weaving Artist",
+                "Multi-Block Structure Alignment Checker",
+                "Applied Energistics Channel Starver",
+                "Ender IO Fluid Tank Stack-Watcher",
+                "Chunk Loading Budget Allocator",
+                "CMAS One-Star Air-Guzzler",
+                "Wreck Penetration Line Tangler",
+                "Mask Clearing Reflex Champion",
+                "Buoyancy Control Perfectionist",
+                "Marine Life Staring Competition Contestant",
+                "Weight Belt Micro-Adjuster",
+                "Safety Stop Drift Passenger",
+                "Valsalva Equalization Survivor",
+                "Faceplant-to-Wake Specialist",
+                "Rope Tension Miscalculator",
+                "Dock Start Slip-and-Slider",
+                "Premium Nippers Dulling Specialist",
+                "Seam-Line Sanding Perfectionist",
+                "Airbrush Needle Clogging Victim",
+                "Water-Slide Decal Tearing Expert",
+                "Panel Line Wash Over-Wiper",
+                "Backlog Accumulation Grandmaster",
+                "Master Grade Manual Misreader",
+                "Tamiya Extra Thin Cement Sniffer",
+                "Nub-Mark Camouflage Specialist",
+                "Custom Weathering Mud Slapper",
+                "Dry-Brushing Edge Highlighter",
+                "Polystyrene Modification Experimenter",
+                "Kitbashing Chaosmancer",
+                "Zaku Mono-Eye Realignment Expert",
+                "Styrene Dust Inhaler",
+                "Decal Placement Geometry Critic",
+            ]
+
+            let currentRoll = 0
+            const maxRolls = 4
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*"
+
+            function scrambleText(targetText, targetColor, callback) {
+                let iterations = 0
+                subtitleContainer.style.color = targetColor;
+
+                const interval = setInterval(() => {
+                    subtitleEl.innerText = targetText
+                        .split("")
+                        .map((char, index) => {
+                            if (index < iterations || char === " ") {
+                                return targetText[index]
+                            }
+                            return chars[Math.floor(Math.random() * chars.length)]
+                        })
+                        .join("")
+
+                    if (iterations >= targetText.length) {
+                        clearInterval(interval)
+                        if (callback) callback()
+                    }
+                    iterations += 2 
+                }, 30)
+            }
+function executeRoll() {
+    currentRoll++;
+
+    if (currentRoll < maxRolls) {
+        iconEl.className = "loader";
+
+        const randomTitle = funnyTitles[Math.floor(Math.random() * funnyTitles.length)];
+        
+        scrambleText(randomTitle, "var(--magenta)");
+        
+        setTimeout(executeRoll, 3000);
+    } else {
+        scrambleText("Software Engineer", "var(--yellow)", () => {
+            iconEl.className = "check";
+            
+            setTimeout(() => {
+                iconEl.classList.add("hide-icon");
+                subtitleContainer.style.gap = "0px"; 
+            }, 2000);
+        });
+    }
+}
+
+            // Fire off the first loop immediate sequence
+            executeRoll()
+        })
+    </script>
+</body>
+
+</html>
