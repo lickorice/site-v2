@@ -2,443 +2,609 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <meta name="description" content="Welcome to the official website for Carlos Panganiban.">
-  <meta name="keywords" content="carlos, panganiban, software, developer, unviersity of the philippines, diliman, upd">
-  <meta name="author" content="Carlos Panganiban">
-  <link rel="image_src" href="https://cdn.carlospanganiban.com/site/og_img.jpg" />
+    <meta name="description" content="Welcome to the official website for Carlos Panganiban.">
+    <meta name="keywords"
+        content="carlos, panganiban, software, developer, university of the philippines, diliman, upd">
+    <meta name="author" content="Carlos Panganiban">
+    <link rel="image_src" href="https://cdn.carlospanganiban.com/site/og_img.jpg" />
 
-  <meta property="og:image" content="https://cdn.carlospanganiban.com/site/og_img.jpg">
-  <meta property="og:title" content="Carlos Panganiban" />
-  <meta property="og:description" content="Carlos Panganiban's online front yard.">
-  <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://cdn.carlospanganiban.com/site/og_img.jpg">
+    <meta property="og:title" content="Carlos Panganiban" />
+    <meta property="og:description" content="Carlos Panganiban's online front yard." />
+    <meta property="og:type" content="website" />
 
-  <title>Carlos Panganiban</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inconsolata:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/main.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Carlos Panganiban</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,500;1,700&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
-
-  <!-- Custom scrollbar -->
-  <link rel="stylesheet" href="css/perfect-scrollbar.css">
-  <script src="js/perfect-scrollbar.min.js"></script>
+    <!-- NOTE: FOR ME, just search the NOTEs in case we need to update employment-related details. -->
 </head>
 
 <body>
-  <div id="particles"></div>
+    <div class="brutalist-container">
 
-  <header>
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item ms-4 text-right d-none d-sm-block">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <div id="intro">
-    <div id="intro-flex" class="d-flex flex-sm-row flex-column">
-      <div id="intro-img" class="my-auto">
-        <img src="assets/sq.png" class="avatar border rounded-circle object-fit-cover" alt="" srcset="">
-      </div>
-      <div id="intro-text" class="my-auto mx-4">
-        <h1 class="intro-title" data-aos="fade" data-aos-duration="500" data-aos-easing="ease-in-sine">Carlos Panganiban
-        </h1>
-        <h4>
-          <a target="_blank" href="https://www.youtube.com/channel/UC8a5WOVoh87BHLd9me_ie0Q"
-            class="intro-link me-sm-4 me-2" data-aos="fade" data-aos-delay="500" data-aos-duration="200"
-            data-aos-easing="ease-in-sine">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a target="_blank" href="https://github.com/lickorice" class="intro-link me-sm-4 me-2" data-aos="fade"
-            data-aos-delay="700" data-aos-duration="200" data-aos-easing="ease-in-sine">
-            <i class="fab fa-github"></i>
-          </a>
-          <a target="_blank" href="https://www.linkedin.com/in/cgpanganiban/" class="intro-link me-sm-4 me-2"
-            data-aos="fade" data-aos-delay="900" data-aos-duration="200" data-aos-easing="ease-in-sine">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a target="_blank" href="mailto:cgpanganiban@up.edu.ph" class="text-nowrap intro-mail" data-aos="fade"
-            data-aos-delay="1100" data-aos-duration="200" data-aos-easing="ease-in-sine">
-            <i class="fa fa-envelope"></i>
-            <span class="d-sm-inline d-none">
-              cgpanganiban@up.edu.ph
-            </span>
-          </a>
-      </div>
-    </div>
-    </h4>
-  </div>
-
-  <div id="content">
-    <div class="container-fluid">
-      <div class="row opaque-section">
-        <div class="col-md" data-aos="fade" data-aos-delay="400" data-aos-duration="500" data-aos-easing="ease-in-sine">
-          <div class="container">
-            <h2 class="pb-md-2">About me</h2>
-            <div class="d-flex flex-lg-row flex-column">
-              <div class="text-center text-lg-start me-lg-4 d-lg-flex d-none my-auto">
-                <img src="assets/up.jpg" alt="" class="section-img rounded-circle">
-              </div>
-              <div class="my-auto">
-                <p>
-                  I hold a bachelor's degree in <span class="fw-bold">computer science</span>, from the <span class="fw-bold">University of the Philippines, Diliman</span>. I'm working on my combined master's and doctorate degree at <span class="fw-bold">KAIST</span>, but I am currently on a leave of absence.
-                </p>
-                <p>
-                  I have a passion for telling my own stories and listening to everyone else's, which includes teaching and learning concepts inside or outside academics. With work, I believe in working smart instead of working hard, and "free time" being something we make for ourselves!
-                </p>
-              </div>
+        <header class="hero-section">
+            <div class="hero-content">
+                <div class="avatar-box">
+                    <img src="assets/sq.png" alt="Carlos Panganiban Avatar">
+                </div>
+                <div class="hero-text">
+                    <h1 class="name-title">Carlos Panganiban</h1>
+                    <p class="text-secondary">
+                        <a target="_blank" href="https://www.youtube.com/channel/UC8a5WOVoh87BHLd9me_ie0Q"
+                            class="intro-link link-secondary" data-aos="fade" data-aos-delay="500" data-aos-duration="200"
+                            data-aos-easing="ease-in-sine">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a target="_blank" href="https://github.com/lickorice" class="intro-link link-secondary">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/cgpanganiban/" class="intro-link link-secondary">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a target="_blank" href="mailto:carlos@mithril-works.com" class="text-nowrap intro-link link-secondary">
+                            <i class="fa fa-envelope"></i>
+                            carlos@mithril-works.com
+                        </a>
+                    </p>
+                    <p class="subtitle" id="subtitle-container">
+                        <span id="roll-icon" class="loader"></span>
+                        <span id="roll-subtitle">Software Engineer</span>
+                    </p>
+                </div>
             </div>
-          </div>
-        </div>
-        <hr class="mx-auto w-50 mt-2 mb-4 d-md-none d-flex">
-        <div class="col-md" data-aos="fade" data-aos-delay="400" data-aos-duration="500" data-aos-easing="ease-in-sine"
-          class="">
-          <div class="container">
-            <h2 class="pb-md-2">Academic work</h2>
-            <div id="acadCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="acad-project">
-                    <div class="d-flex flex-lg-row flex-column">
-                      <div>
-                        <img src="assets/tencon.png" alt="" class="section-img d-lg-inline-flex d-none">
-                      </div>
-                      <div class="ms-lg-3 ms-0 my-auto acad-description" data-simplebar>
-                        <h4>Enhancing real-time license plate recognition through edge-cloud computing</h4>
-                        <h6>Presented at <a href="https://ieeexplore.ieee.org/document/9978152">IEEE TENCON 2022, Hong Kong SAR</a></h6>
-                        <p class="mt-4"><span class="fw-bold">Abridged abstract:</span> We propose an edge computing-based ALPR system that locates a target vehicle given a video feed and GPS data. Experimental findings show that edge-heavy and hybridized setups can scale up easily and can perform effectively in low bandwidth conditions (10 Kbps). Meanwhile, the cloud-heavy setup performs the best with a single edge, but suffers in low-bandwidth conditions and has poor scalability.</p>
-                      </div>
-                    </div>
-                  </div>
+        </header>
+
+        <section class="mb-5">
+            <div class="section-header">
+                <h2>Who am I?</h2>
+            </div>
+
+            <article class="item-card-noline crd-card" aria-label="Who am I card">
+                <div class="crd-media" aria-hidden="true">
+                    <img src="assets/afk.gif" class="crd-img" alt="">
                 </div>
-                <div class="carousel-item">
-                  <div class="acad-project">
-                    <div class="d-flex flex-lg-row flex-column">
-                      <div>
-                        <img src="assets/cs140_1.jpg" alt="" class="section-img d-lg-inline-flex d-none">
-                      </div>
-                      <div class="ms-lg-3 ms-0 my-auto acad-description" data-simplebar>
-                        <h4>Paging behavior manipulation in xv6</h4>
-                        <h6>CS 140 - OPERATING SYSTEMS</h6>
-                        <p class="mt-4"><span class="fw-bold">xv6</span> is a teaching operating system developed by
-                          MIT, implemented in ANSI C. As students of CS 140, we are tasked to appropriately alter its
-                          source code to make its paging procedure much more efficient.</p>
-                        <p>We had to alter kernel-level code to implement custom system calls, such as printing the page
-                          table, and other system variables. We also had to implement lazy page allocation and empty
-                          page reuse to optimize compute time and space.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="acad-project">
-                    <div class="d-flex flex-lg-row flex-column">
-                      <div>
-                        <img src="assets/cs21_2.jpg" alt="" class="section-img d-lg-inline-flex d-none">
-                      </div>
-                      <div class="ms-lg-3 ms-0 my-auto overflow-auto acad-description">
-                        <h4>Single cycle MIPS processor in SystemVerilog</h4>
-                        <h6>CS 21 - COMPUTER ORGANIZATION AND ARCHITECTURE</h6>
-                        <p class="mt-4"><span class="fw-bold">SystemVerilog</span> is a hardware description language
-                          (HDL) used in designing processors and other electronic systems, such as integrated circuits.
+                <div class="company-content crd-content">
+                    <div class="role-group">
+                        <h4 class="role-title">You can call me Carlos!</h4>
+                        <p class="crd-body">While I use this site as a professional résumé, this is first and foremost a place for me to show my digital persona; and for you to form your first impressions.
+                            <span class="text-emphasis">I no longer am on major social media platforms,</span> so this is my own equivalent to a Facebook or an Instagram profile.
                         </p>
-                        <p>We had to come up with cost-efficient designs and solutions for implementing standard and
-                          customized 32-bit MIPS instructions for this project. We used Xilinx Vivado for the designing
-                          and simulation of the project.</p>
-                      </div>
                     </div>
-                  </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="acad-project">
-                    <div class="d-flex flex-lg-row flex-column">
-                      <div>
-                        <img src="assets/cs21_1.jpg" alt="" class="section-img d-lg-inline-flex d-none">
-                      </div>
-                      <div class="ms-lg-3 ms-0 my-auto overflow-auto acad-description">
-                        <h4>Peg solitaire solver in 32-bit MIPS</h4>
-                        <h6>CS 21 - COMPUTER ORGANIZATION AND ARCHITECTURE</h6>
-                        <p class="mt-4"><span class="fw-bold">MIPS</span> is a RISC microprocessor architecture used in
-                          small computing appliances such as routers and smaller computers. It is also used in the
-                          original Sony Playstation, the PSP, and other early Nintendo products.</p>
-                        <p>We are tasked to make a <a target="_blank"
-                            href="https://en.wikipedia.org/wiki/Peg_solitaire">peg solitaire</a> solver from scratch
-                          using the assembly language. My solution involved a recursive backtracking solution.</p>
-                      </div>
+            </article>
+            <article class="item-card-noline crd-card" aria-label="Who am I card">
+                <div class="company-content crd-content">
+                    <div class="role-group">
+                        <h4 class="role-title">The random stuff I do</h4>
+                        <p class="crd-body">
+                            During my undergraduate years, I got <span class="text-emphasis">my scuba diving license</span>, which I used to once <a href="https://youtu.be/iP-LWbbebd0?si=QTJXT2yvprG2Yvtb" class="link-yellow">dive shipwrecks in Coron</a>.
+                            I also joined my uni's <span class="text-emphasis">marksmanship team</span>, got <span class="text-emphasis">employed by my uni</span> during my sophomore year, granting me less friction for my undergrad life.
+                            Occasionally I <span class="text-emphasis">play the violin</span>, but I more frequently <span class="text-emphasis">tickle the plastic ivories</span> these days. I also <span class="text-emphasis">love building and painting gunpla, scale models, and other adjacent kits</span>!
+                        </p>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#acadCarousel" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#acadCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#acadCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#acadCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col highlight transparent">
-          <div class="container">
-            <div class="row">
-              <h1 data-aos="fade" data-aos-duration="500" data-aos-easing="ease-in-sine">
-                A Filipino's Guide to Programming
-              </h1>
-            </div>
-            <div class="row">
-              <div class="col-md" data-aos="fade" data-aos-duration="500" data-aos-easing="ease-in-sine">
-                <div class="ratio ratio-16x9">
-                  <iframe src="https://www.youtube.com/embed/WKx3fXiTAuY" frameborder="0"></iframe>
+            </article>
+            <article class="item-card-noline crd-card" aria-label="Who am I card">
+                <div class="company-content crd-content">
+                    <div class="role-group">
+                        <h4 class="role-title">On gaming</h4>
+                        <p class="crd-body">
+                            As with the software engineer stereotype, I play tons of video games! My family rented out a <span class="text-emphasis">PS1</span> and a <span class="text-emphasis">PS2</span> during my childhood, and I got to play on the <span class="text-emphasis">GBA</span>, the <span class="text-emphasis">PSP</span>, the <span class="text-emphasis">Vita</span>, the <span class="text-emphasis">3DS</span>, the <span class="text-emphasis">Xbox 360</span>, and now mainly on <span class="text-emphasis">PC</span> (desktop and handheld, on the <span class="text-emphasis">Deck</span>).
+                            My mainstays are the <span class="text-emphasis">Final Fantasy franchise</span>, <span class="text-emphasis">modded Minecraft</span>, and random games that <span class="text-emphasis">my friends say feel like "work."</span>
+                            <sup class="footnote-ref"><a href="#fn1" id="fnref1">1</a></sup>
+                        </p>
+                        <p class="crd-body">
+                            As of time of writing, I have <span class="text-emphasis"></span>14,284 hours across 529 games</span> on Steam<sup class="footnote-ref"><a href="#fn2" id="fnref2">2</a></sup>
+                            so I pretty much play anything under the sun, save for mainstream gacha games and MOBAs. I love to believe I do my best to support and contribute to the indie gaming scene.
+                        </p>
+                        
+                        <div class="footnotes" aria-label="Footnotes">
+                            <hr>
+                            <ol>
+                                <li id="fn1">e.g. Factorio <a href="#fnref1" class="footnote-back">↩</a></li>
+                                <li id="fn2">I'm not wiring up Steam API on a static HTML site just to have it update in real-time. <a href="#fnref2" class="footnote-back">↩</a></li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-md mt-md-0 mt-2" data-aos="fade" data-aos-duration="500" data-aos-delay="500"
-                data-aos-easing="ease-in-sine">
-                <p>
-                  <span class="fw-bold">A Filipino's Guide to Programming</span> is a video series I have worked on
-                  since February of 2021. This project of mine was conceived from the realization of the lack of
-                  readily-available, quality, and digestible intellectual Filipino content on social media. The series
-                  is delivered in Filipino-English (Taglish).
-                </p>
-                <p>
-                  As of now, it covers topics from introductory programming classes, such as basic data structures
-                  (arrays, pointers), algorithm analysis, and different problem-solving paradigms (backtracking, dynamic
-                  programming).
-                  In the near future, more videos about more advanced data structures (trees, graphs, etc.) and
-                  algorithms will be uploaded.
-                </p>
-                <p>
-                  My channel has a little over <span class="fs-5 fw-bold">5,000 subscribers</span>, with over
-                  <span class="fs-5 fw-bold">100,000 views</span> and counting. All of my videos can be viewed <span
-                    class="fst-italic">for free.</span>
-                </p>
-                <p>
-                  <a target="_blank" class="text-link roboto-mono"
-                    href="https://www.youtube.com/channel/UC8a5WOVoh87BHLd9me_ie0Q">
-                    Check out the series and my other videos here >>
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row opaque-section">
-        <div class="col-md">
-          <div class="container">
-            <h2 class="pb-md-2">Work experience</h2>
-            <div class="d-flex flex-lg-row flex-column work-position">
-              <div class="text-center text-lg-start me-lg-4 d-lg-flex d-none my-auto">
-                <img src="assets/apkudo.jpg" alt="" class="section-img-small">
-              </div>
-              <div class="my-auto description">
-                <h4>Apkudo</h4>
-                <div class="row">
-                  <h5 class="col-md">Software Engineer</h5>
-                  <h6 class="col-md my-auto">OCT 2025 - PRESENT</h6>
+            </article>
+            <article class="item-card-noline crd-card" aria-label="Who am I card">
+                <div class="company-content crd-content">
+                    <h4 class="role-title">Professionally...</h4>
+                    <p class="crd-body">
+                        I mainly work as a <span class="text-emphasis">full-stack web developer</span> by definition. Am most comfortable working with <span class="text-emphasis">Python (Flask)</span>, <span class="text-emphasis">Typescript</span>, built on top of <span class="text-emphasis">PostgreSQL</span>. In that regard, my experience is varied as I've worked with a variety of systems: from institutional systems with thousands of users, to logistics systems with hundreds of billions of entries.
+                    </p>
+                    <p class="crd-body">
+                        <!-- NOTE: EDIT THIS IF I CHANGE EMPLOYMENT -->
+                        Currently, I work at <a href="https://apkudo.com/" class="link-yellow">Apkudo</a>, where we work on applications to support the <a href="https://en.wikipedia.org/wiki/Circular_economy" class="link-yellow">circular device economy</a>.
+                    </p>
+                        <p class="crd-body">
+                        Academically, I worked with <span class="text-emphasis">networks and distributed systems</span>, and continue to professionally do so. I'm also fond of maintaining / reviving needed legacy systems for clients.
+                    </p>
                 </div>
-              </div>
+            </article>
+        </section>
+
+        <section class="mb-5">
+            <div class="section-header">
+                <h2>Personal recommendations</h2>
             </div>
-            <div class="d-flex flex-lg-row flex-column work-position">
-              <div class="text-center text-lg-start me-lg-4 d-lg-flex d-none my-auto">
-                <img src="assets/expedock.png" alt="" class="section-img-small">
-              </div>
-              <div class="my-auto description">
-                <h4>Expedock</h4>
-                <div class="row">
-                  <h5 class="col-md">Software Engineer</h5>
-                  <h6 class="col-md my-auto">SEP 2023 - SEP 2025</h6>
+
+            <article class="item-card-noline crd-card" aria-label="Who am I card">
+                <div class="company-content crd-content">
+                    <h4 class="role-title">Podcasts</h4>
+                    <div class="rec-table">
+                        <div class="row rec-row align-items-center mb-2 mb-md-0">
+                            <div class="col-12 col-md-4 mb-md-0 mb-2">
+                                <a href="https://www.youtube.com/@WordsUnravelled" class="rec-title-link">Words Unravelled</a>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="rec-desc">by Jess Zafarris and Rob Watts, about the origins of words (etymology) in the English lexicon</div>
+                            </div>
+                        </div>
+                        <div class="row rec-row align-items-center mb-2 mb-md-0">
+                            <div class="col-12 col-md-4 mb-md-0 mb-2">
+                                <a href="https://www.youtube.com/@restishistorypod" class="rec-title-link">The Rest is History</a>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="rec-desc">by Dominic Sandbrook and Tom Holland, approachable history conversations</div>
+                            </div>
+                        </div>
+                        <div class="row rec-row align-items-center mb-2 mb-md-0">
+                            <div class="col-12 col-md-4 mb-md-0 mb-2">
+                                <a href="https://www.youtube.com/@TheBookClubpodhq" class="rec-title-link">The Book Club</a>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="rec-desc">discussions and recommendations about interesting books</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+            </article>
+
+            <article class="item-card-noline crd-card" aria-label="Who am I card">
+                <div class="company-content crd-content">
+                    <h4 class="role-title">Games</h4>
+                    <div class="rec-table">
+                        <div class="row rec-row align-items-center mb-2 mb-md-0">
+                            <div class="col-12 col-md-4 mb-md-0 mb-2">
+                                <a href="https://www.curseforge.com/minecraft/modpacks/terrafirmagreg-modern" class="rec-title-link">TerraFirmaGreg</a>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="rec-desc">genuinely one of the best (if not the best) Minecraft modpacks I've played ever since I started playing these packs in 2012</div>
+                            </div>
+                        </div>
+                        <div class="row rec-row align-items-center mb-2 mb-md-0">
+                            <div class="col-12 col-md-4 mb-md-0 mb-2">
+                                <a href="https://store.steampowered.com/app/2939600/Tower_Networking_Inc/" class="rec-title-link">Tower Networking Inc.</a>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="rec-desc">(subjectively) enjoyable game about network infrastructure</div>
+                            </div>
+                        </div>
+                        <div class="row rec-row align-items-center mb-2 mb-md-0">
+                            <div class="col-12 col-md-4 mb-md-0 mb-2">
+                                <a href="https://boardgamearena.com/gamepanel?game=terraformingmars" class="rec-title-link">Terraforming Mars</a>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="rec-desc">a board game I got from a friend's auction; I play this online with friends @ BGArena</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <section class="mb-5">
+            <div class="section-header">
+                <h2>How do we get in touch?</h2>
             </div>
-            <div class="d-flex flex-lg-row flex-column work-position">
-              <div class="text-center text-lg-start me-lg-4 d-lg-flex d-none my-auto">
-                <img src="assets/ti.jpg" alt="" class="section-img-small">
-              </div>
-              <div class="my-auto description">
-                <h4>Texas Instruments</h4>
-                <div class="row">
-                  <h5 class="col-md">Intern</h5>
-                  <h6 class="col-md my-auto">JUN 2021 - AUG 2021</h6>
+
+            <article class="item-card-noline crd-card" aria-label="Who am I card">
+                <div class="company-content crd-content">
+                    <div class="role-group">
+                        <h4 class="role-title">Since I no longer have socials...</h4>
+                        <p class="crd-body">... and I don't particularly give away my instant messaging details to anyone, feel free to contact me at my email (<a target="_blank" href="mailto:carlos@mithril-works.com" class="link-yellow">carlos@mithril-works.com</a>), which I actively check, and/or message me on <a href="https://www.linkedin.com/in/cgpanganiban/" class="link-yellow">LinkedIn</a>, but I check that much less frequently.</p>
+                    </div>
                 </div>
-              </div>
+            </article>
+        </section>
+
+        <section class="mb-5">
+            <div class="section-header">
+                <h2>Recent blog posts</h2>
             </div>
-            <div class="d-flex flex-lg-row flex-column work-position">
-              <div class="text-center text-lg-start me-lg-4 d-lg-flex d-none my-auto">
-                <img src="assets/ilcdiliman.png" alt="" class="section-img-small">
-              </div>
-              <div class="my-auto description">
-                <h4>Interactive Learning Center - UP Diliman</h4>
-                <div class="row">
-                  <h5 class="col-md">System Administrator</h5>
-                  <h6 class="col-md my-auto">SEP 2022 - SEP 2023</h6>
-                </div>
-                <div class="row">
-                  <h5 class="col-md">Computer Programmer III</h5>
-                  <h6 class="col-md my-auto">SEP 2021 - SEP 2022</h6>
-                </div>
-                <div class="row">
-                  <h5 class="col-md">UVLE Intern</h5>
-                  <h6 class="col-md my-auto">NOV 2020 - SEP 2021</h6>
-                </div>
-              </div>
+            <div id="blog-posts-container">
+                <p class="text-secondary" id="blog-loading-text">Posts may still be loading. If this is blank, you may want to consider visiting the blog directly via the button below:</p>
             </div>
-          </div>
-          <hr class="mx-auto w-50 mt-2 mb-4 d-flex">
-          <div class="container">
-            <h2 class="pb-md-2 mt-4">Voluntary experience</h2>
-            <div class="d-flex flex-lg-row flex-column work-position">
-              <div class="text-center text-lg-start me-lg-4 d-lg-flex d-none my-auto">
-                <img src="assets/dsc.png" alt="" class="section-img-small">
-              </div>
-              <div class="my-auto description">
-                <h4>Google Developer Student Clubs - UP Diliman</h4>
-                <div class="row">
-                  <h5 class="col-md">Founding Lead for Engineering</h5>
-                  <h6 class="col-md my-auto">2020 - 2021</h6>
+            <div class="section-actions" style="margin-top:0.8rem;">
+                <a class="action-btn" href="https://blog.carlospanganiban.com" target="_blank" rel="noopener noreferrer">Visit my blog <i class="fa-solid fa-angles-right"></i></a>
+            </div>
+        </section>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rssUrl = 'https://blog.carlospanganiban.com/index.xml';
+            const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+            const container = document.getElementById('blog-posts-container');
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.status === 'ok') {
+                        container.innerHTML = '';
+                        
+                        const posts = data.items.slice(0, 5);
+                        
+                        posts.forEach(post => {
+                            const pubDate = new Date(post.pubDate).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'short',
+                                day: 'numeric'
+                            });
+
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = post.description;
+                            let cleanDescription = tempDiv.textContent || tempDiv.innerText || '';
+                            if (cleanDescription.length > 150) {
+                                cleanDescription = cleanDescription.substring(0, 150) + '...';
+                            }
+
+                            const articleHtml = `
+                                <article class="item-card edu-card" style="margin-bottom: 1.5rem;">
+                                    <div class="edu-dot"></div>
+                                    <div class="company-content">
+                                        <h3 class="org-name" style="margin-bottom: 0.25rem;">
+                                            <a href="${post.link}" class="link-yellow text-decoration-none" target="_blank" rel="noopener noreferrer">
+                                                ${post.title}
+                                            </a>
+                                        </h3>
+                                        <p class="text-secondary" style="font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.4;">
+                                            ${cleanDescription}
+                                        </p>
+                                        <div class="role-group">
+                                            <span class="date-text">${pubDate}</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            `;
+                            container.insertAdjacentHTML('beforeend', articleHtml);
+                        });
+                    } else {
+                        throw new Error('RSS parsing failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching RSS feed:', error);
+                    container.innerHTML = '<p class="text-danger">Failed to load recent blog posts. Please check back later.</p>';
+                });
+        });
+    </script>
+
+        <section class="mb-5">
+            <div class="section-header">
+                <h2>Publications</h2>
+            </div>
+
+            <article class="item-card edu-card">
+                <div class="edu-dot"></div>
+                <div class="company-content">
+                    <h3 class="org-name">Enhancing Real-Time License Plate Recognition Through Edge-Cloud Computing</h3>
+                    <div class="role-group">
+                        <h4 class="role-title">Presented at <a href="https://ieeexplore.ieee.org/document/9978152" class="link-yellow">IEEE TENCON 2022</a>, @ Hong Kong SAR</h4>
+                        <span class="date-text">2022, <a class="link-magenta" href="https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16905168223458973292">cited by 7</a></span>
+                    </div>
                 </div>
-              </div>
+            </article>
+        </section>
+
+        <section class="mb-5">
+            <div class="section-header">
+                <h2>Experience</h2>
             </div>
-            <div class="d-flex flex-lg-row flex-column work-position">
-              <div class="text-center text-lg-start me-lg-4 d-lg-flex d-none my-auto">
-                <img src="assets/csi.png" alt="" class="section-img-small">
-              </div>
-              <div class="my-auto description">
-                <h4>UP Center for Student Innovations</h4>
-                <div class="row">
-                  <h5 class="col-md">President</h5>
-                  <h6 class="col-md my-auto">2021 - 2022</h6>
+
+            <!-- NOTE: Employment details -->
+            <article class="item-card">
+                <div class="company-logo-wrapper">
+                    <img src="assets/apkudo.jpg" alt="Apkudo Logo">
                 </div>
-                <div class="row">
-                  <h5 class="col-md">Director for Engineering</h5>
-                  <h6 class="col-md my-auto">2019 - 2020</h6>
+                <div class="company-content">
+                    <h3 class="org-name">Apkudo</h3>
+
+                    <div class="role-group">
+                        <h4 class="role-title">Software Engineer</h4>
+                        <span class="date-text">Since OCT 2025</span>
+                    </div>
                 </div>
-              </div>
+            </article>
+
+            <article class="item-card">
+                <div class="company-logo-wrapper">
+                    <img src="assets/expedock.png" alt="Expedock Logo">
+                </div>
+                <div class="company-content">
+                    <h3 class="org-name">Expedock</h3>
+
+                    <div class="role-group">
+                        <h4 class="role-title">Software Engineer</h4>
+                        <span class="date-text">SEP 2023 - SEP 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card">
+                <div class="company-logo-wrapper">
+                    <img src="assets/ti.jpg" alt="Texas Instruments Logo">
+                </div>
+                <div class="company-content">
+                    <h3 class="org-name">Texas Instruments</h3>
+
+                    <div class="role-group">
+                        <h4 class="role-title">Intern</h4>
+                        <span class="date-text">JUN - AUG 2021</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card">
+                <div class="company-logo-wrapper">
+                    <img src="assets/up.png" alt="UP Diliman Logo">
+                </div>
+                <div class="company-content">
+                    <h3 class="org-name">University of the Philippines</h3>
+
+                    <div class="role-group">
+                        <h4 class="role-title">Consultant</h4>
+                        <span class="date-text">Since SEP 2023</span>
+                    </div>
+                    <div class="role-group">
+                        <h4 class="role-title">System Administrator</h4>
+                        <span class="date-text">SEP 2022 - SEP 2023</span>
+                    </div>
+                    <div class="role-group">
+                        <h4 class="role-title">Computer Programmer III</h4>
+                        <span class="date-text">SEP 2021 - SEP 2022</span>
+                    </div>
+                    <div class="role-group">
+                        <h4 class="role-title">Computer Programmer I</h4>
+                        <span class="date-text">NOV 2020 - SEP 2021</span>
+                    </div>
+                </div>
+            </article>
+            <div class="section-actions" style="margin-top:0.8rem;">
+                <a class="action-btn" href="https://www.linkedin.com/in/cgpanganiban/" target="_blank" rel="noopener noreferrer">See my <i class="fab fa-linkedin"></i> LinkedIn <i class="fa-solid fa-angles-right"></i></a>
             </div>
-            <div class="text-end">
-              <a target="_blank" href="https://www.linkedin.com/in/cgpanganiban/" class="roboto-mono">
-                See my full LinkedIn profile here >>
-              </a>
+
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2>Education</h2>
             </div>
-          </div>
-        </div>
-        <hr class="mx-auto w-50 mt-4 mb-4 d-md-none d-flex">
-        <div class="col-md">
-          <div class="container">
-            <h2 class="pb-md-2">Away from the keyboard</h2>
-            <div class="float-start me-4 mb-4 d-sm-block d-none">
-              <img src="assets/afk.gif" alt="" class="afk-img">
-            </div>
-            <p>When I'm not diving into code, you'll find me diving for underwater wonders! I'm fond of the beach, 
-              and particularly what lies beyond it—the sea. I have a
-                <a href="https://youtu.be/iP-LWbbebd0" target="_blank" rel="noopener noreferrer">shipwreck diving certification</a>
-                from Coron, and got my diving license from 
-                <a href="https://www.cmas.org/federation-list/federation--philippine-association-on-underwater-activities" target="_blank" rel="noopener noreferrer">PAUA, under CMAS.</a></p>
-            <p>In addition to that, I have a deep admiration for classical music, especially the compositions of J.S. Bach and Beethoven. I actually play the piano and the violin myself, and my goal is to become skilled enough to perform some of their intricate and breathtaking pieces. It's worth mentioning that I started playing the violin when I was 16 years old, and I took up the piano more seriously when I turned 19. Recently, I completed my interpretation of Chopin's Op. 9 No. 2, and my current focus is on Buencamino's Damdamin for solo piano.</p>
-            <p>Cooking is a passion of mine, just as much as savoring delectable dishes. As a Kapampangan, the love for amazing food runs in my blood and is an integral part of both our culture and my own identity. The joy of preparing and indulging in delicious meals truly resonates with me.</p>
-            <p>In addition to my hobbies, I've recently delved into the world of model-making. It all began with building a few Gunpla kits, but over time, I've acquired the skill of airbrushing and adding intricate weathering techniques to enhance their appearance. I'm also honing my brush-painting abilities by working on Tamiya armor models and exploring aircraft models too. There's nothing quite like the joy of model-making while listening to a captivating podcast.</p>
-            <p>But that's not all. When it comes to relieving stress, my go-to activity is playing video games, especially when I'm playing alongside my friends. I particularly enjoy games that stimulate the mind, such as strategy games, simulation games, and non-action RPGs. However, that doesn't mean I don't appreciate other genres as well.</p>
-            <p>I have a few boundaries when it comes to communication, especially in online contexts. For instance, I don't tolerate asking questions <a target="_blank" href="https://dontasktoask.com/">just for the sake of asking</a> or simply <a target="_blank" href="https://www.nohello.com/">saying hello without any meaningful context. </a> So, if you fall into those categories, please understand that I won't be able to respond to your email or direct message.</p>
-            <p>Despite that, please do not hesitate to send me a message, might it be an inquiry or an invitation to
-              chat. Hit me up via email or social media if you want to connect! Just a small request: let's keep the conversation interesting and the questions worthwhile.</p>
-          </div>
-        </div>
-      </div>
+
+            <article class="item-card edu-card">
+                <div class="edu-dot"></div>
+                <div class="company-content">
+                    <h3 class="org-name">Korea Advanced Institute of Science and Technology</h3>
+                    <div class="role-group">
+                        <h4 class="role-title">MS-PhD Program (<span
+                                style="color:rgb(220, 53, 69); font-weight: bold;">DROPPED OUT</span>)</h4>
+                        <span class="date-text">2023</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card edu-card">
+                <div class="edu-dot"></div>
+                <div class="company-content">
+                    <h3 class="org-name">University of the Philippines Diliman</h3>
+                    <div class="role-group">
+                        <h4 class="role-title">Bachelor of Science in Computer Science, magna cum laude</h4>
+                        <span class="date-text">2018 - 2022</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
     </div>
-  </div>
-
-  <footer>
-    <div class="container-fluid" style="background: #000; width: 100%;">
-      <div class="container-fluid">
-        <div class="row footer">
-          <div class="col-sm px-0">
-            <div class="container">
-              <h5 class="mb-3" id="contact">Contact Me</h5>
-              <h6 class="mb-0 footer-text">
-                <i class="fa fa-envelope"></i>
-                cgpanganiban@up.edu.ph <br>
-              </h6>
-              <h6 class="my-0 footer-text">
-                <i class="fa fa-phone"></i>
-                +63 949 932 6278 <br>
-              </h6>
-              <a target="_blank" href="https://fb.com/cpanganiban23" class="footer-link">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a target="_blank" href="https://twitter.com/cgpanganiban" class="footer-link">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a target="_blank" href="https://www.instagram.com/cgpanganiban/" class="footer-link">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a target="_blank" href="https://github.com/lickorice" class="footer-link">
-                <i class="fab fa-github"></i>
-              </a>
-              <a target="_blank" href="https://www.linkedin.com/in/cgpanganiban/" class="footer-link">
-                <i class="fab fa-linkedin"></i>
-              </a>
-
+    <!-- Site footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="brutalist-container" style="padding:1rem 1.5rem;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+                <div class="footer-links">
+                    <a target="_blank" href="https://www.youtube.com/channel/UC8a5WOVoh87BHLd9me_ie0Q" class="intro-link link-secondary"><i class="fab fa-youtube"></i></a>
+                    <a target="_blank" href="https://github.com/lickorice" class="intro-link link-secondary" style="margin-left:0.6rem;"><i class="fab fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/cgpanganiban/" class="intro-link link-secondary" style="margin-left:0.6rem;"><i class="fab fa-linkedin"></i></a>
+                    <a target="_blank" href="mailto:carlos@mithril-works.com" class="intro-link link-secondary" style="margin-left:0.6rem;"><i class="fa fa-envelope"></i> carlos@mithril-works.com</a>
+                </div>
+                <div class="footer-meta" style="color:var(--text-muted);font-family:var(--font-mono);">© Carlos Panganiban — <span id="footer-year"></span></div>
             </div>
-          </div>
-          <div class="col-sm px-0 text-sm-end mt-4 mt-sm-0">
-            <div class="container-fluid">
-              <h6 class="footer-text mb-0">
-                Made with custom CSS and JS, and Bootstrap 5.
-              </h6>
-              <h6 class="footer-text fw-bold">
-                © 2021-2023 Carlos Panganiban. All rights reserved.
-              </h6>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+    <script>
+        // set footer year
+        document.addEventListener('DOMContentLoaded', () => {
+            const y = new Date().getFullYear();
+            const el = document.getElementById('footer-year');
+            if (el) el.innerText = y;
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const subtitleEl = document.getElementById('roll-subtitle')
+            const subtitleContainer = document.getElementById("subtitle-container");
+            const iconEl = document.getElementById("roll-icon");
 
-  <script>
-    AOS.init()
-    particlesJS.load('particles', 'assets/particles.json', function () {
-      var canvas = document.querySelector(".particles-js-canvas-el")
-    });
-    scrolling = document.querySelectorAll('.acad-description')
-    scrolling.forEach((x, i) => {
-      var m = new PerfectScrollbar(x, {
-        wheelSpeed: 0.2,
-        wheelPropagation: true,
-      });
-    })
-  </script>
+            const funnyTitles = [
+                "Coffee-to-Code Converter",
+                "Professional Stack Overflow Explorer",
+                "TypeScript Type-Safety Extremist",
+                "PostgreSQL Query Whisperer",
+                "Gunpla Weathering Enthusiast",
+                "Docker Container Wrangler",
+                "Shipwreck Diver (Code & Maritime)",
+                "Git Commit Over-Thinker",
+                "Ctrl+Z Power User",
+                "Localhost 3000 Celebrity",
+                "Vim Exit Strategy Consultant",
+                "Merge Conflict Arbitrator",
+                "Legacy Code Archaeologist",
+                "AWS Billing Alert Ignorer",
+                "`console.log('here')` Senior Architect",
+                "Tabs vs. Spaces Diplomat",
+                "Browser Tab Hoarder",
+                "Rubber Duck Therapist",
+                "Regex Trial-and-Error Specialist",
+                "Variable Naming Overthinker",
+                "Detached HEAD State Survivor",
+                "Pull Request Novelist",
+                "Print Statement Debugging Purist",
+                "Weekend Side-Project Abandoner",
+                "Bug Relocation Engineer",
+                "Keyboard Shortcut Memorizer",
+                "Production Deployment Daredevil",
+                "Casual Linting Rule Ignorer",
+                "Git Rebase Coward",
+                "Stack Trace Speed Reader",
+                "Caffeine-to-Sarcasm Synthesizer",
+                "Deprecated Systems Necromancer",
+                "Sprint Planning Skeptic",
+                "Browser Cache Purging Expert",
+                "WIP Commit Message Spammer",
+                "Timezone Logic Hater",
+                "Date-String Formatting Victim",
+                "Monorepo Maze Navigator",
+                "Spaghetti Code Chef",
+                "Asynchronous Race Condition Spectator",
+                "Code Review Nitpicker",
+                "3 AM Idea Implementer",
+                "Mock Data Architect",
+                "Tech Debt Investor",
+                "Ctrl+C / Ctrl+V Pipeline Engineer",
+                "Metronome-Ignoring Pianist",
+                "Sight-Reading Roulette Gambler",
+                "Violin Rosin Inhalation Specialist",
+                "Accidental Avant-Garde Violinist",
+                "Suzuki Method Nostalgia Tripper",
+                "Fortissimo-Only Dynamics Expert",
+                "Unsynchronized Duet Partner",
+                "Baroque Ornamentation Improviser",
+                "Loud Kapampangan Conversationalist",
+                "Tibok-Tibok Texture Evaluator",
+                "In-Game Spreadsheet Operations Manager",
+                "Factorio Main Bus Driver",
+                "Train Signal Chaos Creator",
+                "Crusader Kings Family Tree Untangler",
+                "Conveyor Belt Balancer Plagiarist",
+                "Mana Point Hoarder",
+                "'One More Turn' Victim",
+                "GregTech New Horizons Survivor",
+                "Electric Blast Furnace Babysitter",
+                "Chemical Reactor Pipe-Weaving Artist",
+                "Multi-Block Structure Alignment Checker",
+                "Applied Energistics Channel Starver",
+                "Ender IO Fluid Tank Stack-Watcher",
+                "Chunk Loading Budget Allocator",
+                "CMAS One-Star Air-Guzzler",
+                "Wreck Penetration Line Tangler",
+                "Mask Clearing Reflex Champion",
+                "Buoyancy Control Perfectionist",
+                "Marine Life Staring Competition Contestant",
+                "Weight Belt Micro-Adjuster",
+                "Safety Stop Drift Passenger",
+                "Valsalva Equalization Survivor",
+                "Faceplant-to-Wake Specialist",
+                "Rope Tension Miscalculator",
+                "Dock Start Slip-and-Slider",
+                "Premium Nippers Dulling Specialist",
+                "Seam-Line Sanding Perfectionist",
+                "Airbrush Needle Clogging Victim",
+                "Water-Slide Decal Tearing Expert",
+                "Panel Line Wash Over-Wiper",
+                "Backlog Accumulation Grandmaster",
+                "Master Grade Manual Misreader",
+                "Tamiya Extra Thin Cement Sniffer",
+                "Nub-Mark Camouflage Specialist",
+                "Custom Weathering Mud Slapper",
+                "Dry-Brushing Edge Highlighter",
+                "Polystyrene Modification Experimenter",
+                "Kitbashing Chaosmancer",
+                "Zaku Mono-Eye Realignment Expert",
+                "Styrene Dust Inhaler",
+                "Decal Placement Geometry Critic",
+            ]
+
+            let currentRoll = 0
+            const maxRolls = 4
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*"
+
+            function scrambleText(targetText, targetColor, callback) {
+                let iterations = 0
+                subtitleContainer.style.color = targetColor;
+
+                const interval = setInterval(() => {
+                    subtitleEl.innerText = targetText
+                        .split("")
+                        .map((char, index) => {
+                            if (index < iterations || char === " ") {
+                                return targetText[index]
+                            }
+                            return chars[Math.floor(Math.random() * chars.length)]
+                        })
+                        .join("")
+
+                    if (iterations >= targetText.length) {
+                        clearInterval(interval)
+                        if (callback) callback()
+                    }
+                    iterations += 2 
+                }, 30)
+            }
+function executeRoll() {
+    currentRoll++;
+
+    if (currentRoll < maxRolls) {
+        iconEl.className = "loader";
+
+        const randomTitle = funnyTitles[Math.floor(Math.random() * funnyTitles.length)];
+        
+        scrambleText(randomTitle, "var(--magenta)");
+        
+        setTimeout(executeRoll, 3000);
+    } else {
+        scrambleText("Software Engineer", "var(--yellow)", () => {
+            iconEl.className = "check";
+            
+            setTimeout(() => {
+                iconEl.classList.add("hide-icon");
+                subtitleContainer.style.gap = "0px"; 
+            }, 2000);
+        });
+    }
+}
+
+            // Fire off the first loop immediate sequence
+            executeRoll()
+        })
+    </script>
 </body>
 
 </html>
