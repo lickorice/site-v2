@@ -1,0 +1,55 @@
+name: Deploy to S3 and Invalidate CloudFront
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    name: Deploy site to S3 and invalidate CloudFront
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Sync files to S3
+        env:
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+          SOURCE_DIR: ${{ inputs.source_dir || '.' }}
+        run: |
+          echo "Uploading site files to s3://$S3_BUCKET (source: ${SOURCE_DIR:-.})"
+          # Adjust --exclude patterns as needed. We sync the repository root by default.
+          aws s3 sync "${SOURCE_DIR:-.}" "s3://$S3_BUCKET" \
+            --acl public-read --delete --exact-timestamps
+
+      - name: Create CloudFront invalidation
+        if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID != '' }}
+        env:
+          DIST_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+        run: |
+          echo "Creating CloudFront invalidation for distribution: $DIST_ID"
+          aws cloudfront create-invalidation --distribution-id "$DIST_ID" --paths "/*"
+
+      - name: Deployment info
+        run: |
+          echo "Deployed to S3 bucket: ${{ secrets.S3_BUCKET }}"
+          if [ -n "${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" ]; then echo "CloudFront invalidation requested for distribution: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}"; else echo "No CloudFront distribution configured (skip invalidation)"; fi
+
+# Notes:
+# - Add the following repository secrets in your GitHub repo settings:
+#   * AWS_ACCESS_KEY_ID — IAM user's access key ID
+#   * AWS_SECRET_ACCESS_KEY — IAM user's secret access key
+#   * AWS_REGION — AWS region for S3 bucket (e.g. us-east-1)
+#   * S3_BUCKET — Target S3 bucket name (e.g. my-site-bucket)
+#   * CLOUDFRONT_DISTRIBUTION_ID — (optional) CloudFront distribution ID to invalidate
+# - The IAM credentials must have permissions for S3 (s3:PutObject, s3:DeleteObject, s3:ListBucket)
+#   and CloudFront (cloudfront:CreateInvalidation) if using invalidation.
+# - If your static site is built into a specific directory (e.g., 'dist' or 'public'), set
+#   the `SOURCE_DIR` input or update the `SOURCE_DIR` env value in the workflow.
