@@ -27,7 +27,8 @@ jobs:
           echo "Uploading site files to s3://$S3_BUCKET (source: ${SOURCE_DIR:-.})"
           # Adjust --exclude patterns as needed. We sync the repository root by default.
           aws s3 sync "${SOURCE_DIR:-.}" "s3://$S3_BUCKET" \
-            --acl public-read --delete --exact-timestamps
+            --acl public-read --delete --exact-timestamps \
+            --exclude '.git/*' --exclude '.git/**' --exclude '.git'
 
       - name: Create CloudFront invalidation
         env:
