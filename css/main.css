@@ -91,17 +91,20 @@ h6 {
 
 .name-title {
     font-family: var(--font-serif);
-    font-size: clamp(2.5rem, 2vw, 4.5rem);
+    /* allow the title to scale down on small screens, take available space, and never wrap */
+    font-size: clamp(1.25rem, 6.5vw, 4rem);
     text-transform: none;
     letter-spacing: normal;
-    line-height: 1.2;
+    line-height: 1.1;
     margin-bottom: 0;
     background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    white-space: normal;
-    word-break: break-word;
+    white-space: nowrap; /* never break lines */
+    overflow: hidden;
+    flex: 1 1 auto; /* allow title to shrink/grow inside the flex container */
+    min-width: 0; /* ensure flex children can shrink properly */
 }
 
 .subtitle {
