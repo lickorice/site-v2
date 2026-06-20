@@ -55,6 +55,10 @@ h6 {
     gap: 1.5rem;
     flex-wrap: nowrap;
 }
+.hero-content,
+.hero-text {
+    overflow: visible; /* allow visual overflow for descenders */
+}
 
 .hero-text {
     display: flex;
@@ -77,6 +81,7 @@ h6 {
     overflow: hidden;
     flex-shrink: 0;
 }
+.avatar-box { z-index: 1; }
 
 .avatar-box img {
     width: 100%;
@@ -95,14 +100,17 @@ h6 {
     font-size: clamp(1.25rem, 6.5vw, 4rem);
     text-transform: none;
     letter-spacing: normal;
-    line-height: 1.1;
+    /* increase line-height so descenders (g, y) have room to render */
+    line-height: 1.35;
     margin-bottom: 0;
     background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap; /* never break lines */
-    overflow: hidden;
+    /* allow descenders (e.g. g, y) to render outside the line box without increasing layout height */
+    overflow: visible;
+    z-index: 3;
     flex: 1 1 auto; /* allow title to shrink/grow inside the flex container */
     min-width: 0; /* ensure flex children can shrink properly */
 }
@@ -114,6 +122,8 @@ h6 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
+    /* pull subtitle up slightly to compensate larger title line-height */
+    margin-top: calc(-0.5em);
     display: inline-block;
     transition: color 0.2s ease;
 }
